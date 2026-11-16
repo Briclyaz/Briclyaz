@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="230" viewBox="0 0 1012 230" role="img" aria-label="Vitaliy Chichikaylo Windows Terminal Header">
+  <title>Windows Terminal · Vitaliy Chichikaylo</title>
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078D4" />
+      <stop offset="50%" stop-color="#1E90FF" />
+      <stop offset="100%" stop-color="#60CDFF" />
+    </linearGradient>
+    <filter id="winGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <style>
+    .terminal-window { fill: #0c0c0c; stroke: #2d2d2d; stroke-width: 1.5; rx: 10; }
+    .title-bar { fill: #1c1c1c; }
+    .tab { fill: #0c0c0c; }
+    .tab-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 12px; fill: #cccccc; }
+    .win-btn { fill: #ffffff; opacity: 0.7; }
+    .prompt { font-family: 'Cascadia Code', Consolas, 'Courier New', monospace; font-size: 15px; fill: #60CDFF; font-weight: 600; }
+    .cmd { font-family: 'Cascadia Code', Consolas, monospace; font-size: 15px; fill: #F9F1A5; }
+    .out-name { font-family: 'Segoe UI', -apple-system, sans-serif; font-weight: 800; font-size: 34px; fill: url(#headerGrad); letter-spacing: -0.5px; }
+    .out-desc { font-family: 'Cascadia Code', Consolas, monospace; font-size: 14px; fill: #A6B3C2; }
+    .tag-box { fill: #182330; stroke: #0078D4; stroke-width: 1; rx: 4; }
+    .tag-text { font-family: 'Cascadia Code', Consolas, monospace; font-size: 11px; fill: #60CDFF; font-weight: 600; }
+    .cursor { animation: blink 1s infinite; fill: #60CDFF; }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  </style>
+
+  <!-- Window Frame -->
+  <rect width="1010" height="228" x="1" y="1" class="terminal-window" />
+
+  <!-- Title bar -->
+  <path d="M1 10 Q1 1 10 1 L1002 1 Q1011 1 1011 10 L1011 36 L1 36 Z" class="title-bar" />
+  
+  <!-- Active Tab: PowerShell 7 -->
+  <path d="M12 36 L12 12 Q12 7 17 7 L230 7 Q235 7 235 12 L235 36 Z" class="tab" />
+  <!-- Windows 11 Logo in tab -->
+  <g transform="translate(24, 15) scale(0.65)">
+    <rect x="0" y="0" width="9" height="9" fill="#0078D4"/>
+    <rect x="11" y="0" width="9" height="9" fill="#0078D4"/>
+    <rect x="0" y="11" width="9" height="9" fill="#0078D4"/>
+    <rect x="11" y="11" width="9" height="9" fill="#0078D4"/>
+  </g>
+  <text x="46" y="24" class="tab-text">PowerShell 7 · pwsh</text>
+  <text x="215" y="24" class="tab-text" font-size="14">×</text>
+
+  <!-- Plus tab icon -->
+  <text x="248" y="24" class="tab-text" font-size="16">+</text>
+
+  <!-- Window Controls (Minimize, Maximize, Close) -->
+  <g transform="translate(930, 14)">
+    <rect x="0" y="8" width="10" height="1" class="win-btn"/>
+    <rect x="25" y="3" width="9" height="9" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+    <path d="M50 3 L59 12 M59 3 L50 12" stroke="#ffffff" stroke-width="1.2" opacity="0.7"/>
+  </g>
+
+  <!-- Terminal Body Content -->
+  <g transform="translate(30, 68)">
+    <text x="0" y="0" class="prompt">PS C:\Users\Vitaliy&gt; <tspan class="cmd">Get-Content .\profile.txt</tspan></text>
+    
+    <g transform="translate(0, 36)">
+      <text x="0" y="0" class="out-name">Vitaliy Chichikaylo</text>
+      <text x="0" y="28" class="out-desc">Python developer · Android audio modules · Windows automation</text>
+      <text x="0" y="50" class="out-desc" fill="#7EE787">&gt; I build internal tools and maintain NLSound.</text>
+      
+      <!-- Tags -->
+      <g transform="translate(0, 68)">
+        <rect x="0" y="0" width="95" height="22" class="tag-box"/>
+        <text x="47" y="15" text-anchor="middle" class="tag-text">WINDOWS 11</text>
+
+        <rect x="105" y="0" width="105" height="22" class="tag-box"/>
+        <text x="157" y="15" text-anchor="middle" class="tag-text">POWERSHELL 7</text>
+
+        <rect x="220" y="0" width="80" height="22" class="tag-box"/>
+        <text x="260" y="15" text-anchor="middle" class="tag-text">PYTHON</text>
+
+        <rect x="310" y="0" width="95" height="22" class="tag-box"/>
+        <text x="357" y="15" text-anchor="middle" class="tag-text">ANDROID</text>
+
+        <rect x="415" y="0" width="100" height="22" class="tag-box"/>
+        <text x="465" y="15" text-anchor="middle" class="tag-text">DJANGO</text>
+      </g>
+    </g>
+  </g>
+</svg>
